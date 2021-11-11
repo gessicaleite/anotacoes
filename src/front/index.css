@@ -1,0 +1,32 @@
+#notes {
+    width: 70%;
+    margin: 5px auto;
+}
+
+.pai {
+    display: flex;
+    flex: 1 0 400px;
+}
+
+.estilo-div {
+    color: white;
+    border-radius: 10px;
+    margin: 5px 5px;
+    width: 110px;
+    height: 100%;
+    text-align: center;
+    padding: 10px 10px;
+    flex-grow: 1;
+    font-family: 'Indie Flower', cursive;
+}
+
+.titulo {
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 36px;
+}
+
+.paragrafo {
+    font-size: 28px;
+    padding-top: 5px;
+}

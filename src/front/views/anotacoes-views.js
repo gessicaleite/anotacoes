@@ -1,16 +1,23 @@
 class AnotacoesViews {
 
     renderizaAnotacao() {
-        var pai = document.getElementById("notes")
+        var body = document.getElementById("notes");
+        let pai = document.createElement("div");
+        pai.classList.add("pai")
         let div = document.createElement("div");
-        // div.classList.add("estilo");
+        div.classList.add("bg-dark");
+        div.classList.add("estilo-div");
+        div.classList.add("align-content-stretch");
+        body.appendChild(pai);
         pai.appendChild(div);
         let h6 = document.createElement("h6");
         h6.textContent = document.getElementById("titulo").value;
+        h6.classList.add("titulo")
         div.appendChild(h6);
         let p = document.createElement("p");
+        p.classList.add("paragrafo")
         p.textContent = document.getElementById("descricaoTarefa").value;
-        h6.appendChild(p);
+        div.appendChild(p);
     }
 }
 

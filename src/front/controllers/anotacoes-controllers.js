@@ -17,5 +17,4 @@ const botao = document.getElementById("botaoAdd");
 botao.addEventListener ("click", (e) => {
     e.preventDefault();
     minhaAnotacao.addAnotacao();
-    console.log(minhaAnotacao)
 })
