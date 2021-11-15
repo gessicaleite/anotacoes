@@ -18,6 +18,9 @@ class AnotacoesViews {
         p.classList.add("paragrafo")
         p.textContent = document.getElementById("descricaoTarefa").value;
         div.appendChild(p);
+
+        document.getElementById("titulo").value = "";
+        document.getElementById("descricaoTarefa").value = "";
     }
 }
 
@@ -25,5 +28,12 @@ let renderizando = new AnotacoesViews
 
 botao.addEventListener ("click", (e) => {
     e.preventDefault();
-    renderizando.renderizaAnotacao();
+
+    let title = document.getElementById("titulo").value;
+    let note = document.getElementById("descricaoTarefa").value;
+
+    if (title && note) {
+        renderizando.renderizaAnotacao();
+    }
+    
 })

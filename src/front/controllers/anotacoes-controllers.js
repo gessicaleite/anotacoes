@@ -7,7 +7,13 @@ class AnotacoesController {
         this.titulo = document.getElementById("titulo").value;
         this.nota = document.getElementById("descricaoTarefa").value;
         let novaAnotacao = new Anotacoes (this.titulo, this.nota);
-        this.anotacoes.push(novaAnotacao);
+        
+        if (novaAnotacao.nota && novaAnotacao.titulo) {
+            this.anotacoes.push(novaAnotacao);
+        } else {
+            document.getElementById("titulo").value = "";
+            document.getElementById("descricaoTarefa").value = "";
+        }
     }
 }
 
